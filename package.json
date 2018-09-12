@@ -1,8 +1,8 @@
 {
   "name": "hyxx-ui",
   "description": "A  UI components Library with Vue.js for Thunisoft",
-  "version": "1.0.3",
-  "author": "xiaex",
+  "version": "1.0.4",
+  "author": "xiawx",
   "repository": {
     "type": "git",
     "url": "https://github.com/FireFoxRookie/hy-ui"
