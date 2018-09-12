@@ -54,11 +54,11 @@ export default {
     }
   },
   computed: {
-    noFoundShow() {
+    noFoundShow () {
       const options = this.$slots.default || []
       return this.noFound || options.length === 0
     },
-    showPlaceHolder() {
+    showPlaceHolder () {
       let status = false
       if (this.model === '' || this.model === null) {
         status = true
@@ -67,7 +67,7 @@ export default {
     }
   },
   watch: {
-    query(newVal) {
+    query (newVal) {
       this.broadcast('hy-option', 'query', newVal)
       this.$nextTick(() => {
         let is_hidden = true
@@ -79,11 +79,11 @@ export default {
         this.noFound = is_hidden
       })
     },
-    model(newVal) {
+    model (newVal) {
       this.$emit('input', newVal)
       this.updateSingleSelect()
     },
-    isDrop(newVal) {
+    isDrop (newVal) {
       if(!newVal && this.searchable) {
         this.modelToQuery()
       }

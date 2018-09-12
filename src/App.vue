@@ -19,24 +19,70 @@
     <hy-select v-model="select" :searchable="isSerach">
       <hy-option v-for="(item, index) in list" :label="item.name" :value="item.code" :key="index"></hy-option>
     </hy-select>
-    <button @click="btnClick">点击</button>
+    <hy-table :columns="columns" :tabledata="tabledata" :total="total" :page-size="pagesize" :pagination="isPagination"></hy-table>
   </div>
 </template>
 
 <script>
 import hySelect from './components/select/select.vue'
 import hyOption from './components/select/option.vue'
+import hyTable from './components/table/table.vue'
 export default {
   name: 'app',
   components: {
     'hy-select': hySelect,
-    'hy-option': hyOption
+    'hy-option': hyOption,
+    'hy-table': hyTable
   },
   data () {
     return {
       select: '',
+      isPagination: true,
       msg: 'Welcome to Your Vue.js App',
       isSerach: true,
+      columns: [{
+        text: '序号',
+        width: '5%',
+        render(data, index) {
+          return '<div>' + index + '</div>'
+        }
+      }, {
+        text: '姓名',
+        width: '10%',
+        key: 'name'
+      }, {
+        text: '性别',
+        width: '10%',
+        key: 'gender'
+      }, {
+        text: '公司',
+        width: '15%',
+        key: 'company'
+      }, {
+        text: '职位',
+        width: '20%',
+        key: 'position'
+      }],
+      tabledata: [
+        {
+          name: '张三',
+          gender: '男',
+          company: 'XXXXXXX有限公司',
+          position: '前端开发工程师'
+        },
+        {
+          name: '李四',
+          gender: '男',
+          company: 'XXXXXXX有限公司',
+          position: '前端开发工程师'
+        },
+        {
+          name: '李四',
+          gender: '男',
+          company: 'XXXXXXX有限公司',
+          position: '前端开发工程师'
+        }
+      ],
       list: [{
         name: '张三',
         code: 'zs'
@@ -49,7 +95,9 @@ export default {
       },{
         name: '李四',
         code: 'ls'
-      }]
+      }],
+      total: 45,
+      pagesize: 10
     }
   },
   methods: {
