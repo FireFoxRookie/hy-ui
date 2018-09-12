@@ -1,8 +1,12 @@
 import {hySelect, hyOption} from './components/select'
+import hyTable from './components/table'
+import hyPagination from './components/pagination'
 
 const view = {
   'hy-select': hySelect,
-  'hy-option': hyOption
+  'hy-option': hyOption,
+  'hy-table': hyTable,
+  'hy-pagination': hyPagination
 }
 
 const install = (Vue, option={}) => {
@@ -19,7 +23,9 @@ if((typeof window) !== 'undefined' && window.Vue) {
 const API = {
   install,
   'hy-select': hySelect,
-  'hy-option': hyOption
+  'hy-option': hyOption,
+  'hy-table': hyTable,
+  'hy-pagination': hyPagination
 }
 
 export default API
