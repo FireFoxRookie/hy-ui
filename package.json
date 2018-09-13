@@ -1,7 +1,7 @@
 {
   "name": "hyxx-ui",
   "description": "A  UI components Library with Vue.js for Thunisoft",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "xiawx",
   "repository": {
     "type": "git",
