@@ -20,6 +20,7 @@
       <hy-option v-for="(item, index) in list" :label="item.name" :value="item.code" :key="index"></hy-option>
     </hy-select>
     <hy-table :columns="columns" :tabledata="tabledata" :total="total" :page-size="pagesize" :pagination="isPagination"></hy-table>
+    <button @click="showNotice">notice</button>
   </div>
 </template>
 
@@ -100,9 +101,19 @@ export default {
       pagesize: 10
     }
   },
+  mounted () {
+    this.showNotice()
+  },
   methods: {
     btnClick() {
       console.log(this.select)
+    },
+    showNotice() {
+      this.$notice.success({
+        title: '正确',
+        desc: '演示正确',
+        duration: 1.5
+      })
     }
   }
 }

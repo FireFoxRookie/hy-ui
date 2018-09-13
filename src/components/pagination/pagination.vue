@@ -75,7 +75,7 @@ export default {
     },
     // 设置页码包含内容的宽度
     setWidth: function() {
-      var dom = document.getElementById("paginationNum")
+      var dom = document.getElementById("fd-paginationNum")
       if (this.size <= 5) {
         dom.style.width = this.size * 30 + (this.size - 1) * 10 + "px"
       } else {
@@ -135,7 +135,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../../assets/css/common.styl';
 .fd-pagination-ele {
   height: 30px;
