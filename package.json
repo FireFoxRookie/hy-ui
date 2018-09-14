@@ -1,7 +1,7 @@
 {
   "name": "hyxx-ui",
   "description": "A  UI components Library with Vue.js for Thunisoft",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "author": "xiawx",
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
+    "font-awesome": "^4.7.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^13.0.5",

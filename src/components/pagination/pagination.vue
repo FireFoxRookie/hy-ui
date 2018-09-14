@@ -27,9 +27,11 @@
 </template>
 <script>
 export default {
+  name: 'hy-pagination',
   props: {
     total: {
-      type: Number
+      type: Number,
+      default: 0
     },
     pageSize: {
       type: Number,

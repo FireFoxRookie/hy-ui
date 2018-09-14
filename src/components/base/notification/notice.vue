@@ -2,7 +2,7 @@
   <transition name="noticeTransition">
     <div class="fd-notice relative">
       <div class="fd-notice-content" v-html="content"></div>
-      <img class="fd-notice-close pointer absolute block" @click="close" :src="closeImg" />
+      <span class="fd-notice-close pointer absolute block fa fa-times" @click="close"></span>
     </div>
   </transition>
 </template>
@@ -24,8 +24,7 @@ export default {
   },
   data() {
     return {
-      closeTimer: '',
-      closeImg: require('../../../assets/img/hy-close.png')
+      closeTimer: ''
     }
   },
   methods: {
@@ -68,6 +67,16 @@ fontMixin(fontSize=14px, fontColor=#666)
 .fd-notice .fd-notice-content .fd-notice-contents .fd-notice-icon
   width: 24px
   height: 24px
+  font-size: 24px
+
+.fd-notice .fd-notice-content .fd-notice-contents .fd-icon-success
+  color: #1fa67a
+
+.fd-notice .fd-notice-content .fd-notice-contents .fd-icon-warning
+  color: #e6a23c
+
+.fd-notice .fd-notice-content .fd-notice-contents .fd-icon-error
+  color: #d81e06
 
 .fd-notice .fd-notice-content .fd-notice-txt
   margin-left: 15px
@@ -85,6 +94,8 @@ fontMixin(fontSize=14px, fontColor=#666)
   height: 20px
   right: 10px
   top: 10px
+  font-size: 18px
+  color: #b5b6b7
 
 .noticeTransition-enter, .noticeTransition-enter-active
   opacity: 0

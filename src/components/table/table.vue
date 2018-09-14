@@ -28,14 +28,16 @@ export default {
   components: {pagination},
   props: {
     columns: {
-      type: Array
+      type: Array,
+      default: []
     },
     stripe: {
       type: Boolean,
       default: false
     },
     tabledata: {
-      type: Array
+      type: Array,
+      default: []
     },
     showhandle: {
       type: Boolean,
