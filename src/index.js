@@ -1,6 +1,7 @@
 import {hySelect, hyOption} from './components/select'
 import hyTable from './components/table'
 import hyPagination from './components/pagination'
+import notice from './components/notice'
 
 const view = {
   'hy-select': hySelect,
@@ -14,6 +15,7 @@ const install = (Vue, option={}) => {
   Object.keys(view).forEach((key) => {
     Vue.component(key,view[key])
   })
+  Vue.prototype.$notice = notice
 }
 
 if((typeof window) !== 'undefined' && window.Vue) {

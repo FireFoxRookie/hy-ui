@@ -6,9 +6,9 @@ let name = 1,
     noticeIntance
 
 let iconType = {
-  success: require('../../assets/img/hy-success.png'),
-  warning: require('../../assets/img/hy-warning.png'),
-  error: require('../../assets/img/hy-error.png')
+  success: 'fd-icon-success fa-check-circle',
+  warning: 'fd-icon-warning fa-exclamation-circle',
+  error: 'fd-icon-error fa-times-circle'
 }
 
 function getNoticeIntance() {
@@ -27,7 +27,7 @@ function notice(type, option) {
   let duration = option.duration || defaultDuration
   let instance = getNoticeIntance()
   let content = `<div class="fd-notice-contents">
-                   <img class="float-left fd-notice-icon" src="${iconType[type]}"></div>
+                   <span class="float-left fd-notice-icon fa ${iconType[type]}"></span>
                    <div class="float-left fd-notice-txt">
                      <div class="fd-notice-title">${title}</div>
                      <div class="fd-notice-ctxt">${desc}</div>
