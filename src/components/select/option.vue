@@ -1,5 +1,5 @@
 <template>
-    <li v-show="!hidden" class="ellipsis fd-option-li" :class="{'pointer': !disabled, 'notAllowed': disabled, 'fd-option-li-selected': selected}" :disabled="disabled" @click.stop="listClick">{{label}}</li>
+    <li v-show="!hidden" style="display: block" class="ellipsis fd-option-li" :class="{'pointer': !disabled, 'notAllowed': disabled, 'fd-option-li-selected': selected}" :disabled="disabled" @click.stop="listClick">{{label}}</li>
 </template>
 <script>
 import Emitter from '../../mixins/emitter'
