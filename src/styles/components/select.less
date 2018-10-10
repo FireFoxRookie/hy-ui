@@ -1,0 +1,170 @@
+.fd-select__content .fd-select__input {
+  height: 30px;
+}
+
+.fd-select__content .fd-select__input>input, .fd-select__content .fd-select__input>span {
+  height: 100%;
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+  line-height: 30px;
+  text-indent: 10px;
+  outline: none;
+  font-family: @font-family;
+  font-size: 14px;
+  color: #666;
+}
+
+.fd-select__content .fd-select__input>span {
+  line-height: 28px;
+}
+
+.fd-select__content .fd-select__inputArrow {
+  height: 100%;
+  width: 30px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.fd-select__content .fd-select__inputArrow>div {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-left: 0;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  transform: rotate(45deg);
+  transform-origin: 75% 75%;
+  transition: transform 0.3s linear;
+}
+
+.fd-select__content .fd-select__inputArrow .fd-select__isDrop {
+  transform: rotate(225deg); 
+}
+
+.fd-select__content .fd-select__list {
+  background-color: #fff;
+  padding: 10px;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 1px #efefef;
+  border-radius: 6px;
+}
+
+.fd-select__content .fd-select__arrow {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  z-index: 20;
+  left: 50%;
+  margin-left: -5px;
+  top: -5px;
+}
+
+.fd-select__content .fd-select__list .fd-select__ul>li {
+  font-family: 'Microsoft YaHei';
+  border-radius: 3px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block;
+}
+
+.fd-select__content .fd-select__list .fd-select__ul>li:last-child {
+  margin-bottom: 0
+}
+
+.fd-select__content .fd-select__list .fd-select__li--nofound {
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+  font-family: @font-family; 
+}
+
+.fd-select__content .fd-select__list .fd-select__li--nofound:hover {
+  background-color: #4ba7fe;
+  color: #fff;
+}
+
+.fd-option__li{
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+  font-family: @font-family;
+}
+
+.fd-option__li:hover{
+  background-color: #4ba7fe;
+  color: #fff;
+}
+
+.fd-option__li--selected {
+  background-color: #4ba7fe;
+  color: #fff;
+}
+
+@keyframes selectSlideUpIn {
+    0% {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: scaleY(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes selectSlideUpOut {
+    0% {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: scaleY(1);
+    }
+
+    to {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: scaleY(.8);
+    }
+}
+
+.slide-up-appear,.slide-up-enter-active,.slide-up-leave-active {
+    animation-duration: .3s;
+}
+
+.slide-up-appear,.slide-up-enter-active {
+    animation-name: selectSlideUpIn;
+}
+
+.slide-up-leave-active {
+    animation-name: selectSlideUpOut;
+}
+
+.slide-up-appear,.slide-up-enter-active {
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+}
+
+.slide-up-leave-active {
+    animation-timing-function: ease-in-out;
+}

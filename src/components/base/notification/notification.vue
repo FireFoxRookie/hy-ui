@@ -44,8 +44,3 @@ export default {
   }
 };
 </script>
-<style scope lang="stylus">
-.fd-notification
-  position: fixed
-  z-index: 999
-</style>

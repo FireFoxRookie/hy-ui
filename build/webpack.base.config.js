@@ -98,8 +98,10 @@ module.exports = {
     ]
   },
   resolve: {
-    'vue': 'vue/dist/vue.esm.js',
-    '@': resolve('src')
+    alias: {
+      'vue': 'vue/dist/vue.esm.js',
+      '@': resolve('src')
+    }
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),

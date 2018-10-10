@@ -1,0 +1,90 @@
+.fd-notification {
+  position: fixed;
+  z-index: 999;
+}
+
+.fd-notice {
+  width: 330px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 15px;
+  box-shadow: 0 0 20px #e5e5e5;
+  right: 15px;
+}
+
+.fd-notice .fd-notice__content .fd-notice__contents .fd-notice__icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+
+.fd-notice .fd-notice__content .fd-notice__contents .fd-notice__icon--success {
+  color: #1fa67a;
+}
+
+.fd-notice .fd-notice__content .fd-notice__contents .fd-notice__icon--warning {
+  color: #e6a23c;
+}
+
+.fd-notice .fd-notice__content .fd-notice__contents .fd-notice__icon--error {
+  color: #d81e06;
+}
+
+.fd-notice .fd-notice__content .fd-notice__txt {
+  margin-left: 15px;
+}
+
+.fd-notice .fd-notice__content .fd-notice__txt .fd-notice__title {
+  font-size: 16px;
+  color: #333;
+  font-family: @font-family;
+  font-weight: bold;
+}
+
+.fd-notice .fd-notice__content .fd-notice__txt .fd-notice__ctxt {
+  font-size: 14px;
+  color: #666;
+  font-family: @font-family;
+  margin-top: 10px;
+}
+
+.fd-notice .fd-notice__close {
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  font-size: 18px;
+  color: #b5b6b7;
+}
+
+.noticeTransition-enter, .noticeTransition-enter-active {
+  opacity: 0;
+  right: -350px;
+  animation: noticeAppear 0.5s ease-in-out;
+}
+
+@keyframes noticeAppear{
+  0% {
+    opacity: 0;
+    right: -350px;
+  }
+  to {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+.noticeTransition-leave, .noticeTransition-leave-active {
+  animation: noticeDisAppear 0.5s ease-in-out;
+}
+
+@keyframes noticeDisAppear{
+  0% {
+    opacity: 1;
+    right: 10px;
+  }
+  to {
+    opacity: 0;
+    right: -350px;
+  }
+}

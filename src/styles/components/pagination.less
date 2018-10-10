@@ -1,0 +1,165 @@
+.fd-pagination__wrap {
+  height: 30px;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__numWrap .fd-pagination__numList {
+  width: 999999999999999px;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__numWrap {
+  max-width: 190px;
+  overflow: hidden;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__numWrap .fd-pagination__numList .fd-pagination__numItem {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e3ebee;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__numWrap .fd-pagination__numList .fd-pagination__itemhover:hover {
+  color: #00b7f3;
+  border-color: #00b7f3;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__numWrap .fd-pagination__numList .fd-pagination__itemActive {
+  background-color: #00b7f3;
+  color: #fff;
+  border-color: #00b7f3;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination-numWrap .fd-pagination-numList .fd-pagination__numItem:nth-child(1) {
+  margin-left:0;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__move {
+  border: 1px solid #e3ebee;
+  border-radius: 3px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  color: #333;
+  font-size: 14px;
+  margin-left: 10px; 
+}
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__notAllowed {
+  cursor: not-allowed;
+  background-color: #efefef;
+  color: #666;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__move:hover {
+  border-color: #ccc;
+  color: #222;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__notAllowed:hover {
+  background-color: #efefef;
+  color: #666;
+}
+
+.fd-pagination__wrap .fd-pagination__num .fd-pagination__pre {
+  margin-right: 10px;
+}
+
+.fd-pagination__wrap .fd-pagination__jump{
+  height: 30px;
+  margin-left: 50px;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum {
+  height: 30px;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum>label{
+  display: inline-block;
+  height: 100%;
+  line-height: 30px;
+  color: #999999;
+  font-size: 14px;
+  font-family: @font-family;
+  vertical-align: text-top;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum>input {
+  display: inline-block;
+  height: 100%;
+  line-height: 30px;
+  text-indent: 5px;
+  width: 40px;
+  color: #333;
+  fonr-size: 14px;
+  border: 1px solid #e3ebee;
+  border-radius: 3px;
+  vertical-align: text-top;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__fdjumpBtn {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__fdjumpBtn:hover{
+  border-color:#ccc;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum .fd-pagination__errorTip .fd-pagination__tipTxt {
+  font-size: 14px;
+  color: #333;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum .fd-pagination__errorTip .fd-pagination__arrow {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  transform: rotate(-45deg);
+  left: 24px;
+  top: -4px;
+  z-index: 20;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  background-color: #fff;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum .fd-pagination__errorTip {
+  left: 46px;
+  top: 40px;
+}
+
+.fd-pagination__wrap .fd-pagination__jump .fd-pagination__inputNum .fd-pagination__showTip{
+  animation: showtip 0.5s linear;
+}
+
+@keyframes showtip {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  50% {
+    opacity: 0.5;
+    top: 45px;
+  }
+  100% {
+    opacity: 1;
+    top: 40px;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-    <li v-show="!hidden" style="display: block" class="ellipsis fd-option-li" :class="{'pointer': !disabled, 'notAllowed': disabled, 'fd-option-li-selected': selected}" :disabled="disabled" @click.stop="listClick">{{label}}</li>
+    <li v-show="!hidden" style="display: block" class="ellipsis fd-option__li" :class="{'pointer': !disabled, 'notAllowed': disabled, 'fd-option__li--selected': selected}" :disabled="disabled" @click.stop="listClick">{{label}}</li>
 </template>
 <script>
 import Emitter from '../../mixins/emitter'
@@ -43,26 +43,3 @@ export default {
   }
 };
 </script>
-<style lang="stylus" scoped>
-@import '../../assets/css/common.styl';
-fontMixin(fontSize= 14px, fontColor= #666)
-  font-size: fontSize
-  color: fontColor
-  font-family: 'Microsoft YaHei'
-
-.fd-option-li
-  height: 30px
-  padding: 5px 10px
-  border-radius: 3px
-  line-height: 20px
-  margin-bottom: 5px
-  fontMixin()
-
-.fd-option-li:hover
-  background-color: #4ba7fe
-  color: #fff
-
-.fd-option-li-selected
-  background-color: #4ba7fe
-  color: #fff
-</style>

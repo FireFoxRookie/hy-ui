@@ -11,6 +11,7 @@
   "private": false,
   "main": "dist/hy-ui.js",
   "scripts": {
+    "devs": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8080 --config build/webpack.dev.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },

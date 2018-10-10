@@ -6,9 +6,9 @@ let name = 1,
     noticeIntance
 
 let iconType = {
-  success: 'fd-icon-success fa-check-circle',
-  warning: 'fd-icon-warning fa-exclamation-circle',
-  error: 'fd-icon-error fa-times-circle'
+  success: 'fd-notice__icon--success fa-check-circle',
+  warning: 'fd-notice__icon--warning fa-exclamation-circle',
+  error: 'fd-notice__icon--error fa-times-circle'
 }
 
 function getNoticeIntance() {
@@ -26,11 +26,11 @@ function notice(type, option) {
   let desc = option.desc
   let duration = option.duration || defaultDuration
   let instance = getNoticeIntance()
-  let content = `<div class="fd-notice-contents">
-                   <span class="float-left fd-notice-icon fa ${iconType[type]}"></span>
-                   <div class="float-left fd-notice-txt">
-                     <div class="fd-notice-title">${title}</div>
-                     <div class="fd-notice-ctxt">${desc}</div>
+  let content = `<div class="fd-notice__contents">
+                   <span class="float-left fd-notice__icon fa ${iconType[type]}"></span>
+                   <div class="float-left fd-notice__txt">
+                     <div class="fd-notice__title">${title}</div>
+                     <div class="fd-notice__ctxt">${desc}</div>
                    </div>
                    <div class="clear"></div>
                  </div>`
