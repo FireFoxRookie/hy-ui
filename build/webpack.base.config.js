@@ -94,6 +94,10 @@ module.exports = {
             loader: 'autoprefixer-loader'
           }
         ]
+      },
+      {
+        test: /\.(gif|jpg|png|woff|svg|eot|ttf|svg)\??.*$/,
+        loader: 'url-loader'
       }
     ]
   },
@@ -105,11 +109,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
