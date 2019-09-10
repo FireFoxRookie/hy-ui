@@ -2,12 +2,14 @@ import {hySelect, hyOption} from './components/select'
 import hyTable from './components/table'
 import hyPagination from './components/pagination'
 import notice from './components/notice'
+import hyPoptip from './components/poptip/index.js'
 
 const view = {
   'hy-select': hySelect,
   'hy-option': hyOption,
   'hy-table': hyTable,
-  'hy-pagination': hyPagination
+  'hy-pagination': hyPagination,
+  'hy-poptip': hyPoptip
 }
 
 const install = (Vue, option={}) => {
@@ -27,7 +29,8 @@ const API = {
   'hy-select': hySelect,
   'hy-option': hyOption,
   'hy-table': hyTable,
-  'hy-pagination': hyPagination
+  'hy-pagination': hyPagination,
+  'hy-poptip': hyPoptip
 }
 
 export default API

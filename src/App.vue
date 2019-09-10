@@ -16,6 +16,27 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <hy-poptip placement="bottom-start" class="fd-poptip" v-model="poptipIsShow">
+      <div class="inline-block">poptip</div>
+      <div slot="content" class="fd-poptip-content">
+        <div class="fd-poptip-list" v-for="(item, index) in popList" :key="index" v-text="item.name"></div>
+        <div class="clear"></div>
+      </div>
+    </hy-poptip>
+    <hy-poptip placement="right-start" class="fd-poptip" v-model="poptipRightIsShow">
+      <div class="inline-block">poptip</div>
+      <div slot="content" class="fd-poptip-content">
+        <div class="fd-poptip-list" v-for="(item, index) in popList" :key="index" v-text="item.name"></div>
+        <div class="clear"></div>
+      </div>
+    </hy-poptip>
+    <hy-poptip placement="left-start" class="fd-poptip" v-model="poptipLeftIsShow">
+      <div class="inline-block">poptip</div>
+      <div slot="content" class="fd-poptip-content">
+        <div class="fd-poptip-list" v-for="(item, index) in popList" :key="index" v-text="item.name"></div>
+        <div class="clear"></div>
+      </div>
+    </hy-poptip>
     <hy-select v-model="select" :searchable="isSerach">
       <hy-option v-for="(item, index) in list" :label="item.name" :value="item.code" :key="index"></hy-option>
     </hy-select>
@@ -28,12 +49,14 @@
 import hySelect from './components/select/select.vue'
 import hyOption from './components/select/option.vue'
 import hyTable from './components/table/table.vue'
+import hyPoptip from './components/poptip/index.js'
 export default {
   name: 'app',
   components: {
     'hy-select': hySelect,
     'hy-option': hyOption,
-    'hy-table': hyTable
+    'hy-table': hyTable,
+    'hy-poptip': hyPoptip
   },
   data () {
     return {
@@ -41,6 +64,8 @@ export default {
       isPagination: true,
       msg: 'Welcome to Your Vue.js App',
       isSerach: true,
+      poptipRightIsShow: false,
+      poptipLeftIsShow: false,
       columns: [{
         text: '序号',
         width: '5%',
@@ -98,7 +123,21 @@ export default {
         code: 'ls'
       }],
       total: 45,
-      pagesize: 10
+      pagesize: 10,
+      popList: [{
+        name: 'poptip1',
+        code: 'poptip1'
+      }, {
+        name: 'poptip2',
+        code: 'poptip2'
+      }, {
+        name: 'poptip3',
+        code: 'poptip3'
+      }, {
+        name: 'poptip4',
+        code: 'poptip4'
+      }],
+      poptipIsShow: false
     }
   },
   mounted () {
@@ -145,5 +184,13 @@ li {
 
 a {
   color: #42b983;
+}
+
+.fd-poptip-list {
+  float: left;
+}
+
+.fd-poptip {
+  display: inline-block;
 }
 </style>
